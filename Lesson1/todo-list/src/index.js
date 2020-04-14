@@ -4,8 +4,8 @@ import './index.css';
 
 const rootElem = document.querySelector('#root');
 
-const todoListElem = (
+const element = (
   <h1 className="title">Todo List</h1>
 );
 
-ReactDOM.render(todoListElem, rootElem);
+ReactDOM.render(element, rootElem);
