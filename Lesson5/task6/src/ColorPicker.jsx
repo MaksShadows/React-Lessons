@@ -25,7 +25,7 @@ class ColorPicker extends Component {
     render() {
         return (
             <div>
-                <div className="picker__title">{this.state.currentColor}</div>
+                <div className="picker__title">{this.state.color}</div>
                 <button className="picker__button picker__button_coral"
                     onMouseEnter={this.hoverColor.bind(this, CORAL)}
                     onMouseLeave={this.reset}
