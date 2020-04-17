@@ -8,18 +8,18 @@ class ColorPicker extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            currentColor: ""
+            color: ""
         }
     }
     hoverColor = (color) => {
         this.setState({
-            currentColor: color
+            color: color
         })
     }
 
     reset = () => {
         this.setState({
-            currentColor: ""
+          color: ""
         })
     }
     render() {
