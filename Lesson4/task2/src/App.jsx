@@ -1,6 +1,6 @@
 import React from 'react';
 import Clock from './Clock';
-import './index.scss';
+
 
 
 const App = () => {
