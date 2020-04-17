@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Colors from './Colors';
+import ColorPicker from './ColorPicker';
 import './index.scss';
 
 const rootElem = document.querySelector('#root');
 
-ReactDOM.render(<Colors />, rootElem);
+ReactDOM.render(<ColorPicker />, rootElem);
