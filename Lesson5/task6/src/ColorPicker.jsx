@@ -16,12 +16,12 @@ class ColorPicker extends React.Component {
 
     hoverColor = color => {
       this.setState({
-        color: this.state.color = color
+        color:  color,
       })
    }
    reset = () =>{
      this.setState({
-       color: this.state.color = "",
+       color: "",
      })
    }
 
@@ -30,7 +30,6 @@ class ColorPicker extends React.Component {
       <div>
       <div class="picker__title">
         {this.state.color}
-        Red
       </div>
       <div>
         <button class="picker__button picker__button_coral"
