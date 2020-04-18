@@ -1,49 +1,41 @@
 import React, {Component} from 'react';
 import Greeting from './Greeting';
+import Logout from './Logout';
+import Login from './Login';
 
 class Auth extends Component {
+    constructor(props){
+        super(props);
 
-    constructor(props) {
-      super(props);
-      this.state = {
-        isLoggedIn: false
-      }
+        this.state ={
+            isLoggedIn: false,
+        };
     }
 
     handleLogIn = () => {
-      this.setState({
-          isLoggedIn: true,
-      });
-  }
+        this.setState({
+            isLoggedIn: true,
+        });
+    }
 
-  handleLogOut= () => {
-    this.setState({
-        isLoggedIn: false,
-    })
-}
+    handleLogOut= () => {
+        this.setState({
+            isLoggedIn: false,
+        })
+    }
 
-    render() {
-       // let button;
-
-    // const button = this.state.isLoggedIn
-    //   ? <button onClick={this.handleLogout}>Logout</button>
-    //   : <button onClick={this.handleLogin}>Login</button>;
-
-    // if (this.state.isLoggedIn) {
-    //   button = <button className="btn login" onClick={this.handleLogout}>Logout</button>;
-    // } else {
-    //   button = <Login onClick={this.handleLogin} />
-    //   // <button className="btn logout" onClick={this.handleLogin}>Login</button>;
-    // }
-      return (
-        <div className = 'panel'>
-         <Greeting  isLoggedIn={this.state.isLoggedIn} />
-         {this.state.isLoggedIn
-       ? <Logout onLogout={this.handleLogout} />
-       : <Login onLogin={this.handleLogin} />}
-        </div>
-      )
+    render(){
+        return(
+            <div className="panel">
+                <Greeting  isLoggedIn={this.state.isLoggedIn} />
+                <div>
+                {(!this.state.isLoggedIn) ?
+                    <Login onLogin={this.handleLogIn} /> :
+                    <Logout onLogout={this.handleLogOut} />
+                }
+                </div>
+            </div>
+        );
     }
 }
-
 export default Auth;
