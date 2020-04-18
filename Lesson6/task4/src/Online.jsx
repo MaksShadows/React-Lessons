@@ -3,8 +3,8 @@ import React from 'react';
 
 const Online = () =>{
   return(
-    <div class="status">
-    <span class="status__text">All good!</span>
+    <div className="status">
+    <span className="status__text">All good!</span>
   </div>
   );
 };
