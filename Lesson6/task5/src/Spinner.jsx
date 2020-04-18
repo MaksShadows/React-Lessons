@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Spinner = ({ size }) => {
-    const style = {
-      width: `${size}px`,
-      height: `${size}px`
-    };
-    return <span className="spinner" style={style}></span>;
-  };
+const Spinner = props => {
+  return (
+   <span className="spinner"
+   style={{ width: props.size, height: props.size }}
+  >
+   </span>
+  )
+};
 export default Spinner;
