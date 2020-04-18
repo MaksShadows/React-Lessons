@@ -15,10 +15,16 @@ class Auth extends Component {
 
    handleLogIn = () => {
     this.setState({
-        isLoggedIn: true,
+      isSpinner: true,
     });
-    this.showSpinner();
+    setTimeout(() => {
+      this.setState({
+         isLoggedIn: true,
+          isSpinner: false
+      })
+  }, 2000)
 
+    
   }
 
   handleLogOut= () => {
@@ -26,17 +32,6 @@ class Auth extends Component {
         isLoggedIn: false,
     })
   }
-  showSpinner = () => {
-    this.setState({
-        isSpinner: true,
-    });
-
-    setTimeout(() => {
-        this.setState({
-            isSpinner:false,
-        });
-    }, 2000)
-}
 
   render() {
     let button = (!this.state.isLoggedIn) ?
