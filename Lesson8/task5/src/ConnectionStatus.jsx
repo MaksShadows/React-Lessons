@@ -12,19 +12,19 @@ class ConnectionStatus extends Component {
   };
 
   componentWillMount() {
-    window.addEventListener('online', this.onlineStatus);
-    window.addEventListener('offline', this.offlineStatus);
+    window.removeEventListener('online', this.onlineStatus);
+    window.removeEventListener('offline', this.offlineStatus);
   };
 
-  onlineStatus(){
+  onlineStatus =() => {
     this.setState({
-      state: true
+      isOnline: true
     })
   };
 
-  offlineStatus(){
+  offlineStatus =() =>{
     this.setState({
-      state: false
+      isOnline: false
     })
   };
     render() {
