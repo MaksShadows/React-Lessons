@@ -1,43 +1,36 @@
-import React, { Component } from "react";
-
 class ConnectionStatus extends Component {
-  constructor(props) {
-    super(props);
-    state = {
-      isOnline: true
-    };
-  }
+  
+  state = {
+    isOnline: true
+  };
 
   componentDidMount() {
-    window.addEventListener('online', this.onlineStatus);
-    window.addEventListener('offline', this.offlineStatus);
-  };
+    window.addEventListener("online", this.onlineStatus);
+    window.addEventListener("offline", this.offlineStatus);
+  }
 
-  componentWillMount() {
-    window.removeEventListener('online', this.onlineStatus);
-    window.removeEventListener('offline', this.offlineStatus);
-  };
+  componentWillUnmount() {
+    window.removeEventListener("online", this.onlineStatus);
+    window.removeEventListener("offline", this.offlineStatus);
+  }
 
-  onlineStatus = () => {
+  onlineStatus  = () => {
     this.setState({
-       isOnline: true
+      isOnline: true
     });
-    }                                 
+  };
 
-    offlineStatus = () => {
+  offlineStatus = () => {
     this.setState({
       isOnline: false
     });
-     }
+  };
 
-    render() {
-      return (
-        this.state.isOnline 
-        ? <div className="status">online</div>
-        : <div className="status status_offline">offline</div>
-
-      )
+  render() {
+    if (this.state.isOnline) {
+      return <div className="status">online</div>;
+    } else {
+      return <div className="status status_offline">offline</div>;
     }
+  }
 }
-
-export default ConnectionStatus;
