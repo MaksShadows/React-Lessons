@@ -20,15 +20,15 @@ class ConnectionStatus extends Component {
 
   onlineStatus = () => {
     this.setState({
-       state: true
+       isOnline: true
     });
-}                                 
+    }                                 
 
-offlineStatus = () => {
+    offlineStatus = () => {
     this.setState({
-      state: false
+      isOnline: false
     });
-}
+     }
 
     render() {
       return (
