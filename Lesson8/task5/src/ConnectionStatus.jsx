@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 
 class ConnectionStatus extends Component {
-  
-  state = {
-    isOnline: true
-  };
+  constructor(props) {
+    super(props);
+    state = {
+      isOnline: true
+    };
+  }
 
   componentDidMount() {
     window.addEventListener('online', this.onlineStatus);
@@ -16,17 +18,18 @@ class ConnectionStatus extends Component {
     window.removeEventListener('offline', this.offlineStatus);
   };
 
-  onlineStatus =() => {
+  onlineStatus = () => {
     this.setState({
-      isOnline: true
-    })
-  };
+       state: true
+    });
+}                                 
 
-  offlineStatus =() =>{
+offlineStatus = () => {
     this.setState({
-      isOnline: false
-    })
-  };
+      state: false
+    });
+}
+
     render() {
       return (
         this.state.isOnline 
