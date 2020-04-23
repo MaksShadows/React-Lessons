@@ -1,14 +1,13 @@
 import React from "react";
 
-const Filter = (props) => {
-
-  const { count, filterText, onChange } = props;
+const Filter = props => {
   return (
       <div className="filter">
-          <span className="filter__count">{count}</span>
-          <input type="text" className="filter__input"
-              value={filterText}
-              onChange={onChange} />
+          <span className="filter__count">{props.count}</span>
+          <input type="text" 
+           className="filter__input" 
+           value={props.filterText}
+           onChange={props.onChange} />
       </div>
   )
 }
