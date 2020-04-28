@@ -1,6 +1,8 @@
 import React from "react";
 import classNames from 'classnames'
 
+
+
 const Task = ({ id, done, text, onChange, onDelete}) => {
 
   const listItemClass = classNames('list-item', {'list-item_done': done});
@@ -17,5 +19,7 @@ const Task = ({ id, done, text, onChange, onDelete}) => {
   </li>
   );
 };
+
+
 
 export default Task;
