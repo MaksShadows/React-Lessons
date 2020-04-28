@@ -1,11 +1,12 @@
 import React from 'react';
-import TodoList from './TodoList';
-
+import ToDoList from './TodoList';
 
 const App = () => {
-  return(
-    <TodoList />
-  )
+
+  return (
+    <ToDoList />
+  );
+
 };
 
 export default App;
