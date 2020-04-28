@@ -1,15 +1,15 @@
 import React from 'react';
-import TasksList from './TasksList.jsx';
+import TasksList from './TasksList'
 
+const TodoList = () => {
 
-const ToDoList = () => {
+    return (
+        <>
+            <h1 className="title">Todo List</h1>
+            <TasksList />
+        </>
+    );
 
-  return (
-      <>
-          <h1 className="title">Todo List</h1>
-          <TasksList />
-      </>
-  );
 };
 
-export default ToDoList;
+export default TodoList;
