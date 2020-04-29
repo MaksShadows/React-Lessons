@@ -6,7 +6,8 @@ const Task = ({ id, done, text, onChange, onDelete }) => {
  
     return (
         <li className={classNames('list-item', { 'list-item_done' : done })}>
-            <input type="checkbox"
+            <input 
+                type="checkbox"
                 className="list-item__checkbox"
                 defaultChecked={done}
                 onChange={() => onChange(id)}
@@ -18,13 +19,14 @@ const Task = ({ id, done, text, onChange, onDelete }) => {
 
 };
 
-export default Task;
-
 Task.propTypes = {
-    text: PropTypes.string,
-    done: PropTypes.bool,
-    id: PropTypes.string,
-    onDelete: PropTypes.func,
-    onChange: PropTypes.func
+    text: PropTypes.string.isRequired,
+    done: PropTypes.bool.isRequired,
+    id: PropTypes.string.isRequired,
+    onDelete: PropTypes.isRequired,
+    onChange: PropTypes.func.isRequired,
 
 }
+
+export default Task;
+
