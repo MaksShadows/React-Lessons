@@ -41,6 +41,7 @@ class CreateTaskInput extends Component {
 
 CreateTaskInput.propTypes = {
   onCreate: PropTypes.func,
+  
 }
 
 
