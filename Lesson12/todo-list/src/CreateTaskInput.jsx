@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
 class CreateTaskInput extends Component {
   state = {
@@ -39,10 +39,10 @@ class CreateTaskInput extends Component {
 }
 
 
-CreateTaskInput.propTypes = {
-  onCreate: PropTypes.func,
+// CreateTaskInput.propTypes = {
+//   onCreate: PropTypes.func,
   
-}
+// }
 
 
 export default CreateTaskInput
