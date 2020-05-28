@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Mailbox/> should not render count if no underead messages 1`] = `
+<div
+  className="mailbox"
+>
+  <span
+    className="mailbox__text"
+  >
+    Messages
+  </span>
+</div>
+`;
+
+exports[`<Mailbox/> should return 2 unreadmessages 1`] = `
+<div
+  className="mailbox"
+>
+  <span
+    className="mailbox__text"
+  >
+    Messages
+  </span>
+  <span
+    className="mailbox__count"
+  >
+    2
+  </span>
+</div>
+`;
+
+exports[`<Mailbox/> should return only Mailbox without undereadmessages 1`] = `
+<div
+  className="mailbox"
+>
+  <span
+    className="mailbox__text"
+  >
+    Messages
+  </span>
+</div>
+`;
