@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<User/> should return user with age 25 1`] = `
+<li
+  className="user"
+>
+  <span
+    className="user__name"
+  />
+  <span
+    className="user__age"
+  >
+    25
+  </span>
+</li>
+`;
+
+exports[`<User/> should return user with name Maks 1`] = `
+<li
+  className="user"
+>
+  <span
+    className="user__name"
+  >
+    Maks
+  </span>
+  <span
+    className="user__age"
+  />
+</li>
+`;
