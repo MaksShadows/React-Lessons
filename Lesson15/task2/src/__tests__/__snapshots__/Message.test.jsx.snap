@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Message /> sould return empty message 1`] = `""`;
+
+exports[`<Message /> sould return message with text 1`] = `""`;
